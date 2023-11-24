@@ -1,0 +1,223 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 224 71.4% 4.1%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 224 71.4% 4.1%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 71.4% 4.1%;
+
+    --primary: 220.9 39.3% 11%;
+    --primary-foreground: 210 20% 98%;
+
+    --secondary: 220 14.3% 95.9%;
+    --secondary-foreground: 220.9 39.3% 11%;
+
+    --muted: 220 14.3% 95.9%;
+    --muted-foreground: 220 8.9% 46.1%;
+
+    --accent: 220 14.3% 95.9%;
+    --accent-foreground: 220.9 39.3% 11%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 20% 98%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 224 71.4% 4.1%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 224 71.4% 4.1%;
+    --foreground: 210 20% 98%;
+
+    --card: 224 71.4% 4.1%;
+    --card-foreground: 210 20% 98%;
+
+    --popover: 224 71.4% 4.1%;
+    --popover-foreground: 210 20% 98%;
+
+    --primary: 210 20% 98%;
+    --primary-foreground: 220.9 39.3% 11%;
+
+    --secondary: 215 27.9% 16.9%;
+    --secondary-foreground: 210 20% 98%;
+
+    --muted: 215 27.9% 16.9%;
+    --muted-foreground: 217.9 10.6% 64.9%;
+
+    --accent: 215 27.9% 16.9%;
+    --accent-foreground: 210 20% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 20% 98%;
+
+    --border: 215 27.9% 16.9%;
+    --input: 215 27.9% 16.9%;
+    --ring: 216 12.2% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+.custom-tooltip {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  font-size: 14px;
+  color: #333;
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ===== */
+
+/* Define styles for the dashboard container */
+.dashboard-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr; /* Three equal-width columns */
+  gap: 20px; /* Spacing between columns */
+  height: 100vh; /* Full viewport height */
+  /* justify-content: center; */
+  /* align-items: center;
+  flex-direction: column; */
+}
+
+/* Style the left panel */
+.left-panel {
+  grid-column: 1; /* Occupies the first column */
+  position: sticky; /* Stick to the top */
+  top: 0; /* Position at the top */
+}
+
+/* Style the middle panel */
+.middle-panel {
+  grid-column: 2; /* Occupies the second column */
+  /* overflow-y: scroll;  */
+  height: 100vh; /* Restrict the height */
+  position: relative;
+}
+
+/* Style the right panel */
+.right-panel {
+  grid-column: 3; /* Occupies the third column */
+  position: sticky; /* Stick to the top */
+  top: 0; /* Position at the top */
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+  /* Adjust layout for screens smaller than 768px */
+  .dashboard-container {
+    grid-template-columns: 1fr; /* Single column layout */
+  }
+  .left-panel,
+  .middle-panel,
+  .right-panel {
+    grid-column: 1; /* Each panel occupies the full width */
+  }
+}
+
+.shimmer-container {
+  position: relative;
+  overflow: hidden;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+}
+
+.shimmer {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 25%,
+    rgba(255, 255, 255, 0.2) 50%,
+    transparent 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite linear;
+  position: relative;
+  z-index: 1;
+}
+
+.lines {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 5px,
+    #d0d0d0 5px,
+    #d0d0d0 10px
+  );
+  background-size: 10px 10px;
+  opacity: 0.15;
+  z-index: 2;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.trends-container {
+  display: flex;
+  flex-direction: row;
+  width: 80vw;
+}
+.trend-item {
+  display: flex;
+  flex-direction: row;
+  width: 99vw;
+}
+
+@media (max-width: 768px) {
+  .trends-container {
+    flex-direction: column;
+    width: 200px;
+  }
+  .trend-item {
+    display: flex;
+    flex-direction: row;
+    width: 200px;
+  }
+  .vertical-label {
+    text-align: left; /* Align the label text to the left for smaller screens */
+    margin-top: 600px; /* Add some top margin to separate it from the chart */
+  }
+}
+.message-cell {
+  max-width: 150px; /* Set a maximum width for the message cell */
+  word-wrap: break-word; /* Allow the message to break onto the next line */
+}

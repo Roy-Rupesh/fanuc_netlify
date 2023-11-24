@@ -1,0 +1,96 @@
+.utility-box {
+  /* background-image: linear-gradient(
+    174.2deg,
+    rgb(228, 241, 255) 7.1%,
+    rgb(238, 244, 246) 67.4%
+  ); */
+  box-shadow: 0px 4px 8px rgba(2, 45, 88, 0.5);
+  padding: 20px;
+  border-radius: 25px;
+  /* border: 2px solid #5fa7ef; */
+  background: transparent;
+  margin: 20px;
+  z-index: +2;
+  background-color: #ffffff; /* Adjust the color and alpha value */
+  box-shadow: 0px 4px 8px rgba(2, 45, 88, 0.5);
+}
+
+.utilityform-title {
+  padding-top: 0px;
+  text-align: center;
+  color: #0056b3;
+}
+.utility-custom-textfield label {
+  color: #061c73;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.utility-custom-textfield .icon {
+  color: #5fa7ef;
+}
+.utilitybutton-container {
+  text-align: center;
+  margin-top: 20px;
+}
+/* .utilityform-text {
+  color: #000; 
+} */
+.utilitysubmit-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.utilitysubmit-button:hover {
+  background-color: #0056b3;
+}
+
+.form-zoom-in {
+  opacity: 0;
+  transform: scale(0.8);
+  /* transition: opacity 0.5s ease, transform 0.5s ease; */
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out; /* Slower and smoother */
+}
+
+.form-zoom-in.active {
+  opacity: 1;
+  transform: scale(1);
+}
+/* Responsive styling for screens less than 480px */
+@media (max-width: 480px) {
+  .utilityform-title {
+    color: #e4f1ff;
+  }
+
+  .utility-box {
+    width: 100%;
+    padding: 10px;
+  }
+  .utilityform-item {
+    width: 100%;
+  }
+  .utility-box input,
+  .utility-box select {
+    font-size: 14px;
+  }
+
+  .utilitybutton-container {
+    text-align: center;
+  }
+}
+
+/* Style the OTP Verification Modal */
+
+.otp-modal-title {
+  font-size: 20px;
+  background-color: #eff7ff;
+  font-weight: bolder;
+  padding-bottom: 10px;
+  color: #1976d2;
+  text-align: center;
+}

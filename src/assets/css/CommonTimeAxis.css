@@ -1,0 +1,32 @@
+.time-axis-container {
+  position:absolute;
+  height: 35px; /* Or the height that works for your design */
+  width: 90%;
+}
+
+.time-axis-line {
+  position: absolute;
+  /* top:8px; */
+  width: 80%;
+  border-top: 1px solid black; /* Represents the axis line */
+}
+
+.time-tick-label {
+  position: absolute;
+  padding-left: 14px;
+  padding-right: 10px;
+  transform: translateX(-50%); /* Center the label on the tick */
+  white-space: nowrap; /* Prevent the text from wrapping */
+  font-size: 10px;
+}
+.tick-label {
+  white-space: nowrap;
+  overflow: hidden;
+  text-align: right;
+  text-overflow: ellipsis;
+  max-width: 100px; /* Adjust the width as necessary */
+}
+.time-tick-mark {
+  position: absolute;
+  transform: translateX(-50%); /* center the tick mark at the calculated left position */
+}

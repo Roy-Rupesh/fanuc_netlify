@@ -1,0 +1,140 @@
+
+
+
+  
+  @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap'); /* Example using Roboto font */
+
+  .part-timeline-chart-container {
+    /* border: 2px solid black; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* margin-bottom: 5px; */
+    background-color: rgb(241, 239, 239);
+    width: 100%;
+    box-sizing: border-box;
+    max-width: 100%;  /* Remove the max-width to let it expand fully */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    height:100px;
+   
+  }
+  
+  .part-timeline-chart-container .recharts-responsive-container {
+    margin-bottom: 0; /* Adjust the bottom margin */
+  }
+  
+.part-timeline-chart-container h1 {
+  text-align: center;
+  margin-bottom: 10px; /* Adjust this value to change the space below the heading */
+}
+
+.part-timeline-chart-container div {
+  margin-bottom: 5px;
+}
+
+.part-timeline-chart-container label {
+  margin-right: 5px;
+}
+
+.button-container {
+  margin-bottom: 20px;
+  display: flex;  /* Use flex for button-container */
+  flex-wrap: wrap;  /* Allow buttons to wrap to next line */
+  justify-content: center;  /* Center-align buttons */
+}
+
+.button-container button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    margin: 5px; 
+    background-color: #e0e0e0;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s;
+  }
+
+  .button-container button:hover {
+    background-color: #4CAF50;
+    transform: scale(1.05);
+  }
+  
+  .button-container button.selected {
+    background-color: #4CAF50;
+    color: white;
+  }
+
+
+  .chart-legend {
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 3px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    margin-top: 0px;
+    margin-bottom: 0;
+    /* padding: 2px; */
+  }
+  
+  .legend-item {
+    display: flex;
+    align-items: center;
+    margin-right: 5px;
+    font-size: 10px;
+  }
+  
+  .color-box {
+    width: 8px;
+    height: 8px;
+    margin-right: 5px;
+  }
+
+  .date-range {
+    text-align: center;
+    margin-top: 2px;
+    font-size: 14px;
+    color: #666;
+  }
+  
+.custom-tooltip {
+  background-color: #f5f5f5;
+  color: #333333;
+  padding: 1px;
+  border-radius: 1px;
+  border: 1px solid #cccccc;
+}
+.no-data-message {
+  color: red;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+}
+.label{
+  font-weight: bold;
+  font-size: 10px;
+}
+.custom-legend {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  margin-bottom: 4px;
+}
+
+.legend-color-box {
+  margin-right: 4px;
+  border: 1px solid #ddd; /* optional: to show the box more clearly */
+}
+
+.legend-text {
+  /* Your font styling here, if you prefer not to inline style it */
+}

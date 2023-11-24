@@ -1,0 +1,118 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap'); /* Example using Roboto font */
+
+.motion-chart-container  {
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px; /* Reduced padding */
+  margin-top: 20px;  /* Adjusted margin */
+  background-color: #f6f6f6;
+  width: 100%;   /* Make width 100% for responsiveness */
+  box-sizing: border-box; /* Include padding and border in total width */
+  max-width: 1000px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative; 
+  height: auto;   /* Adjust this to make it dynamic */
+  min-height: 250px;  /* You can set a minimum height */
+  padding-bottom: 30px; 
+  
+}
+
+.button-container {
+  margin-bottom: 20px;
+  display: flex;  /* Use flex for button-container */
+flex-wrap: wrap;  /* Allow buttons to wrap to next line */
+justify-content: center;  /* Center-align buttons */
+}
+
+.button-container button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  margin: 5px; 
+  background-color: #e0e0e0;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s;
+}
+
+.button-container button:hover {
+  background-color: #4CAF50;
+  transform: scale(1.05);
+}
+
+.button-container button.selected {
+  background-color: #4CAF50;
+  color: white;
+}
+
+@media (max-width: 900px) {
+  .motion-chart-container {
+      padding: 15px;
+      margin-top: 10px;
+      font-size: 0.95em;
+      
+  }
+}
+
+@media (max-width: 700px) {
+  .motion-chart-container  {
+      padding: 10px;
+      margin-top: 5px;
+      font-size: 0.9em;
+  }
+}
+
+@media (max-width: 500px) {
+  .motion-chart-container  {
+      padding: 5px 5px 20px 5px; /* Adjusted bottom padding */
+      margin-top: 5px;
+      font-size: 0.85em;
+  }
+}
+
+
+.chart-legend {
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
+  padding: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.color-box {
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+}
+.no-data-message {
+  color: #ff0000; /* Red color for the message */
+  font-weight: bold;
+  padding: 20px;
+  text-align: center;
+}
+.date-range {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #666;
+}
+.no-data-message {
+  color: red;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+}

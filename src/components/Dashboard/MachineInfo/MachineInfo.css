@@ -1,0 +1,16 @@
+.vertical-label {
+  writing-mode: vertical-rl; /* Vertical text orientation */
+  transform: rotate(180deg); /* Rotate text 180 degrees for vertical display */
+  white-space: nowrap; /* Prevent text from wrapping */
+  text-align: center; /* Center the text horizontally */
+  width: 30px; /* Adjust the width as needed */
+  position: absolute; /* Position it as needed */
+  top: 55%; /* Center the text vertically */
+  left: 10; /* Adjust the horizontal position to align with the container */
+  transform-origin: center; /* Center the rotation origin */
+  transform: translateX(-50%) translateY(-50%) rotate(180deg); /* Center the label both vertically and horizontally */
+}
+
+.horizontal-label {
+  text-align: center;
+}

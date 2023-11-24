@@ -1,0 +1,225 @@
+/* Add this CSS to your stylesheet */
+
+/* Style for the container of the legends, MAC ID dropdown, and buttons */
+.gantt-chart-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px;
+  background-color:lightgray;
+  ; /* Light gray background color */
+  /* border: 2px solid #2c2c2c;  */
+  margin-top: 20px;
+  width: 95%; /* Adjust based on your requirement */
+  max-width: 1100px; /* Example max width */
+  margin: 0 auto;
+  overflow: hidden; /* Hide horizontal overflow */
+}
+
+.gantt-chart {
+  width: 100%;
+  height: 100%;
+}
+/* Style for the legends */
+@media (max-width: 600px) {
+  .chart-legend {
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    justify-content: space-between; /* Adjust as needed for spacing */
+    margin-bottom: 20px; /* Spacing between chart legends and the chart */
+  }
+}
+
+.legend-item {
+  font-size: small;
+  display: flex;
+  align-items: center;
+}
+
+/* Style for the color boxes */
+.color-box {
+  width: 10px; /* Adjust the size of the color box */
+  height: 10px; /* Adjust the size of the color box */
+  margin-right: 5px; /* Adjust as needed */
+}
+
+@media (max-width: 600px) {
+  .chart-container {
+    margin-bottom: 70px;
+  }
+}
+
+/* Style for the labels */
+@media (max-width: 600px) {
+  .label {
+    font-weight: bold;
+    font-family: "Arial", sans-serif;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+    font-size: 14px; /* Adjust font size as needed */
+    color: black;
+  }
+}
+
+/* Style for the MAC ID dropdown */
+@media (max-width: 600px) {
+  .dropdown-container {
+    width: 100%;
+    margin-bottom: 20px; /* Spacing between dropdown and buttons */
+  }
+}
+
+@media (max-width: 600px) {
+  .button-container {
+    width: 100%;
+    margin-bottom: 60px;
+    margin-top: 30px;
+    padding-bottom: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .button-container button {
+    padding: 8px 15px;
+    font-size: 12px;
+    border: none;
+    border-radius: 5px;
+    margin: 0 5px;
+    background-color: #e0e0e0;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s;
+  }
+}
+
+.button-container button:hover {
+  background-color: #4caf50;
+  transform: scale(1.05);
+}
+
+.button-container button.selected {
+  background-color: #4caf50;
+  color: white;
+}
+
+/* Define background colors for legends */
+.color-box:nth-child(1) {
+  background-color: #4caf50; /* Production */
+}
+
+.color-box:nth-child(2) {
+  background-color: yellow; /* Idle */
+}
+
+.color-box:nth-child(3) {
+  background-color: red; /* Power Off */
+}
+
+@media (max-width: 600px) {
+  .legend-label {
+    font-size: 11px; /* Decreased font size */
+  }
+}
+
+.total-counts {
+  background-color: #2c2c2c; /* Dark gray background for the totals */
+  color: white; /* White text for contrast against the dark background */
+  padding: 10px;
+  border-radius: 5px; /* Optional: for rounded corners */
+}
+.custom-tooltip {
+  background-color: #bfccd8;
+  border-radius: 10px;
+  padding: 5px 10px; /* Reduced vertical padding */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  font-size: 12px; /* Reduced font size */
+  font-weight: bold;
+}
+
+.tooltip-header {
+  font-weight: bold;
+  color: #ecf0f1;
+  border-bottom: 1px solid #34495e;
+  padding-bottom: 3px;
+  margin-bottom: 3px;
+}
+
+.tooltip-content {
+  color: #ecf0f1;
+}
+
+.refresh-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 20px; /* Spacing between refresh controls and the chart */
+}
+
+.refresh-controls button {
+  padding: 8px 15px;
+  font-size: 12px;
+  border-color: #2c2c2c;
+  border-radius: 5px;
+  margin: 0 3px;
+  background-color: #e0e0e0;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+  outline: none;
+}
+
+.refresh-controls button:hover {
+  background-color: #4caf50;
+  color: white;
+  transform: scale(1.05);
+}
+
+/* If you want to differentiate the auto-refresh button from the manual refresh when it's active, you can use this style */
+.refresh-controls button.auto-refresh-active {
+  background-color: #4caf50;
+  color: white;
+}
+#gear1, #gear2, #gear3 {
+  font-size: 40px;
+  color: #888;
+  display: block;
+  position: absolute;
+}
+          
+#gear1 {
+  top: 10px;
+  left: 5px;
+}
+          
+#gear2 {
+  top: 10px;
+  left: 60px;
+}
+
+#gear3 {
+  top: 10px;
+  left: 115px;
+}
+
+.spin {
+  -webkit-animation:spin 4s linear infinite;
+  -moz-animation:spin 4s linear infinite;
+  animation:spin 4s linear infinite;
+}
+
+.spin-back {
+  -webkit-animation:spin-back 4s linear infinite;
+  -moz-animation:spin-back 4s linear infinite;
+  animation:spin-back 4s linear infinite;
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+@-moz-keyframes spin-back { 100% { -moz-transform: rotate(-360deg); } }
+@-webkit-keyframes spin-back { 100% { -webkit-transform: rotate(-360deg); } }
+@keyframes spin-back { 100% { -webkit-transform: rotate(-360deg); transform:rotate(-360deg); } }

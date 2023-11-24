@@ -1,0 +1,68 @@
+.chart-wrapper {
+  border: 1px solid #c3c3c3;
+  background-color: #fff;
+  padding-left: 9px;
+  padding-right: 9px;
+  /* padding-top: 7px; */
+  /* padding-bottom: 17px; */
+  border-radius: 3px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 60%; /* Make it take the full available height */
+  position: relative;
+  /* margin-bottom: 5px; */
+  margin-left: 10px;
+  
+}
+.chart-wrapper h4 {
+  margin-bottom: 2px; /* Decrease the bottom margin of the heading */
+  font-size: 16px; /* Adjust font size if needed */
+}
+
+.button-container {
+  display: flex;
+  /* margin-top: 5px; */
+  justify-content: space-between;
+  margin-bottom: 2px;
+  flex-wrap: wrap; /* Allow buttons to wrap if necessary */
+}
+
+.button-container button {
+  background-color: lightgray;
+  color: black;
+  padding: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  flex-grow: 1; /* Make buttons take equal space */
+  font-size: 14px; /* Adjust the font size of the text inside the buttons */
+  margin-right: 5px;
+  text-align: center; /* Center text in buttons */
+}
+
+.button-container button:hover {
+  background-color: lightgrey;
+}
+
+.button-container button.selected {
+  background-color: #4caf50;
+}
+
+@media screen and (max-width: 768px) {
+  .chart-wrapper {
+    padding: 10px;
+  }
+
+  .button-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .button-container button {
+    margin-bottom: 5px;
+    width: 100%; /* Make buttons full width */
+  }
+
+  
+}

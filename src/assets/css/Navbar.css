@@ -1,0 +1,33 @@
+/* Navbar.css */
+
+.navbar-container {
+    background: linear-gradient(135deg, #333333, #1a1a1a);
+    color: #333; /* Dark text color */
+    padding: 10px 20px; /* Increase padding for spacing */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #015c9a;
+  }
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 10px; /* Reduce the gap for spacing */
+  }
+
+  .nav-link a {
+    text-decoration: none;
+    color: #ffffff; /* Dark text color */
+    font-weight: 700;
+    transition: color 0.3s;
+  }
+
+  .nav-link a:hover {
+    color: #0078c8;
+  }

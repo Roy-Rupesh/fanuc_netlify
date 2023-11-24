@@ -1,0 +1,135 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.feed-chart-container {
+  /* border: 2px solid black; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* margin-bottom: 5px; */
+  background-color: rgb(241, 239, 239);
+  width: 100%;
+  box-sizing: border-box;
+  max-width: 100%;  /* Remove the max-width to let it expand fully */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  height: 100px;
+}
+
+.custom-legend {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  width: 20%; 
+}
+
+
+.legend-item {
+  display: flex;
+  align-items: center;
+}
+
+
+.color-box,
+.gradient-box {
+  width: 10px;
+  height: 10px;
+  margin-right: 2px;
+  justify-content: space-between; 
+}
+
+.gradient-box {
+  background: linear-gradient(to right, rgba(255, 255, 0), rgba(255, 0, 0));
+}
+
+.gradient-labels {
+  display: flex;
+  justify-content: space-between;
+  width: 50px;
+}
+
+.button-container {
+  margin-bottom: 20px;
+  display: flex;  /* Use flex for the button-container */
+flex-wrap: wrap;  /* Allow buttons to wrap to the next line */
+justify-content: center;  /* Center-align the buttons */
+}
+
+.button-container button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  margin: 5px;
+  background-color: #e0e0e0;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+  outline: none;
+}
+
+.button-container button:hover {
+  background-color: #4CAF50;
+  transform: scale(1.05);
+}
+
+.button-container button.selected {
+  background-color: #4CAF50;
+  color: white;
+}
+
+/* Adjust for various screen sizes */
+@media (max-width: 900px) {
+  .feed-chart-container {
+      padding: 15px;
+      margin-top: 10px;
+    font-size: 0.95em;  /* Slightly reduce the font size */
+  }
+}
+
+@media (max-width: 700px) {
+  .feed-chart-container {
+      padding: 10px;
+    margin-top: 5px;
+    font-size: 0.9em;  /* Further reduce the font size */
+  }
+}
+
+@media (max-width: 500px) {
+  .feed-chart-container {
+    padding: 5px 5px 20px 5px; /* Adjusted bottom padding */
+    margin-top: 5px;
+    font-size: 0.85em;  /* Reduce even more */
+  }
+}
+.customChart .recharts-legend-item text {
+  fill: black;
+}
+.custom-tooltip {
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.label {
+  margin: 0;
+  
+}
+.no-data-message {
+color: red;
+font-weight: bold;
+text-align: center;
+margin-top: 20px;
+}
+.time-value {
+  margin: 0;
+  font-size: 12px;
+  font-weight: bold;
+}
+.speed-value{
+  margin: 0;
+  font-size: 12px;
+  font-weight: bold;
+}
